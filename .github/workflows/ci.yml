@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Validate HTML
-        uses: HtmlHint/htmlhint-action@v1
-        with:
-          path: 'index.html'
+      - name: Install and Run HTMLHint
+        run: |
+          npm install -g htmlhint
+          htmlhint index.html
